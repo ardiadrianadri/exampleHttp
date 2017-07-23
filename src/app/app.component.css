@@ -1,0 +1,25 @@
+md-input-container.full_row {
+    width: 100%;
+}
+div.button-group {
+    position: absolute;
+    right: 2%;
+}
+
+img.load {
+    width: 30%;
+    z-index: 9999999;
+    float: inherit;
+    position: absolute;
+    margin-left: 30%;
+}
+
+div.face {
+    position: absolute;
+    left: 2%;
+    width: 100%
+}
+
+i.face {
+    margin-right: 2%;
+}

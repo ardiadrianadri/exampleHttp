@@ -1,3 +1,22 @@
-<h1>
-  {{title}}
-</h1>
+<img class="load" *ngIf="loading"  src="/assets/loader.gif"/>
+<h1>Search heroes</h1>
+<md-grid-list cols="1" rowHeight="20:1">
+  <md-grid-tile>
+      <md-input-container class="full_row">
+        <input mdInput placeholder="Hero to look for" [(ngModel)]="heroName"/>
+      </md-input-container>
+  </md-grid-tile>
+  <md-grid-tile>
+    <div class="button-group">
+      <button md-raised-button color="warn" (click)="heroName=''">Reset</button>&nbsp;
+      <button md-raised-button color="primary" (click)="lookforHero()">Search</button>
+    </div>
+  </md-grid-tile>
+</md-grid-list>
+<md-grid-list cols="3" rowHeight="10:1">
+  <md-grid-tile *ngFor="let hero of listHeros">
+    <div class="face">
+      <i class="material-icons face">face</i>{{hero}}
+    </div>
+  </md-grid-tile>
+</md-grid-list>
