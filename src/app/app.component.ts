@@ -10,12 +10,12 @@ import { Observable } from 'rxjs/Observable';
 })
 export class AppComponent {
   heroName = '';
-  listHeros: Observable <string[]>;
+  listHeros$: Observable <string[]>;
   loading = false;
 
   constructor (private _superHeroService: SuperHeroService) {}
 
   lookforHero () {
-    this.listHeros = this._superHeroService.getHeroes(this.heroName);
+    this.listHeros$ = this._superHeroService.getHeroes(this.heroName);
   }
 }

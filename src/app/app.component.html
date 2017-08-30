@@ -14,7 +14,7 @@
   </md-grid-tile>
 </md-grid-list>
 <md-grid-list cols="3" rowHeight="10:1">
-  <md-grid-tile *ngFor="let hero of listHeros | async">
+  <md-grid-tile *ngFor="let hero of listHeros$ | async">
     <div class="face">
       <i class="material-icons face">face</i>{{hero}}
     </div>
